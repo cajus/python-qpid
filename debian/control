@@ -15,3 +15,12 @@ Description: Python bindings for qpid/mlib
  http://amqp.org/
  .
  This package contains the qpid python bindings.
+
+Package: qpid-specs
+Architecture: all
+Depends: ${misc:Depends}
+Description: QPID spec information
+ Qpid/C++ is a C++ implementation of the AMQP protocol described at
+ http://amqp.org/
+ .
+ This package contains the qpid sepcs.
