@@ -1,8 +1,7 @@
 Source: qpid-python
-Section: misc
+Section: python
 Priority: extra
 Maintainer: Cajus Pollmeier <cajus@debian.org>
-Uploaders: Cajus Pollmeier <cajus@debian.org>
 Build-Depends: debhelper (>= 7), python-support, python-setuptools
 Standards-Version: 3.9.1
 Homepage: http://qpid.apache.org
@@ -18,6 +17,7 @@ Description: Python bindings for qpid/mlib
 
 Package: qpid-specs
 Architecture: all
+Section: misc
 Depends: ${misc:Depends}
 Description: QPID spec information
  Qpid/C++ is a C++ implementation of the AMQP protocol described at
