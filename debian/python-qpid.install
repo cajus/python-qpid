@@ -1,2 +1,2 @@
 usr/bin/qpid-python-test
-usr/lib/python2.6/dist-packages
+usr/lib/python*/dist-packages
