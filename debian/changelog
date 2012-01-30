@@ -1,3 +1,9 @@
+qpid-python (0.14-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Cajus Pollmeier <cajus@debian.org>  Mon, 30 Jan 2012 10:55:37 +0100
+
 qpid-python (0.12-2) unstable; urgency=low
 
   * Fixed build for different python versions. (Closes: #646658)
