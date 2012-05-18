@@ -533,7 +533,6 @@ class Driver:
         log.warn("reconnect succeeded: %s:%s", host, port)
       self._next_retry = None
       self._attempts = 0
-      self._host = 0
       self._delay = self.connection.reconnect_interval_min
       self._retrying = False
       self.schedule()
@@ -706,7 +705,10 @@ class Engine:
       mech, initial = self._sasl.start(" ".join(mechs))
     except sasl.SASLError, e:
       raise AuthenticationFailure(text=str(e))
-    self.write_op(ConnectionStartOk(client_properties=CLIENT_PROPERTIES,
+
+    client_properties = CLIENT_PROPERTIES.copy()
+    client_properties.update(self.connection.client_properties)
+    self.write_op(ConnectionStartOk(client_properties=client_properties,
                                     mechanism=mech, response=initial))
 
   def do_connection_secure(self, secure):
